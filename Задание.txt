@@ -18,3 +18,16 @@
 это настройка для стенда, чтобы получать токен, если не получится напиши, я тебе экспорртну 
 настройку и покажу как получить токен
 не, maven это сборщик, токен это по сути пароль для доступа к API, его можно запросить в keycloak, почитай про Oauth2
+{
+	 "project" : "Maven",
+   "lastName" : "Chechnev",
+   "firstName" : "Nickolay",
+   "middleName" : "Andreevich",
+   "birthDate" : "06.08.2001",
+   "gender" : "male",
+   "email" : "kolya.chechnev@mail.ru",
+   "position" : "junior programmer",
+   "department" : "remote_work",
+   "hiringDate" : "08.09.2021",
+   "terminationDate" : "Hello"
+}
