@@ -22,6 +22,24 @@ public class User {
     private String hiringDate;
     private String terminationDate;
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", project='" + project + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", middleName='" + middleName + '\'' +
+                ", birthDate='" + birthDate + '\'' +
+                ", gender='" + gender + '\'' +
+                ", email='" + email + '\'' +
+                ", position='" + position + '\'' +
+                ", department='" + department + '\'' +
+                ", hiringDate='" + hiringDate + '\'' +
+                ", terminationDate='" + terminationDate + '\'' +
+                '}';
+    }
+
     /**
      * Геттеры и сеттеры
      */
