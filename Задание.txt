@@ -31,3 +31,7 @@
    "hiringDate" : "08.09.2021",
    "terminationDate" : "Hello"
 }
+Научиться парсить excel файл, получаю токен (делает прога), беру табельный номер чекаю ручкой(делает прога) https://demo.platform.aimc.io/application/api/v1/user?employmentNumber=табельный номер,
+если чувак нашелся, беру опять токен, если чувак нашелся дергаю put или patch ручку, если не нашелся дергаю токен то post
+Прочитать про RestTemplate;
+Анотация для дерганья ручек FeignClient
