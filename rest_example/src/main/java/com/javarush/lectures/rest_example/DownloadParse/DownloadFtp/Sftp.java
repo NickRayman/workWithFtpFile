@@ -1,4 +1,4 @@
-package com.javarush.lectures.rest_example.ftipFile;
+package com.javarush.lectures.rest_example.DownloadParse.DownloadFtp;
 
 import com.jcraft.jsch.*;
 
