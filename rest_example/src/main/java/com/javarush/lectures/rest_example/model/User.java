@@ -1,5 +1,7 @@
 package com.javarush.lectures.rest_example.model;
 
+import java.util.Date;
+
 /**
  * Класс User является сущностью User. Это будет
  * POJO класс.
@@ -10,6 +12,8 @@ public class User {
      * Поля нашей сущности User
      */
     private Integer id;
+    private String login;
+    private String employmentNumber;
     private String project;
     private String lastName;
     private String firstName;
@@ -26,6 +30,7 @@ public class User {
     public String toString() {
         return "User{" +
                 "id=" + id +
+                ", employmentNumber='" + employmentNumber + '\'' +
                 ", project='" + project + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", firstName='" + firstName + '\'' +
@@ -44,12 +49,28 @@ public class User {
      * Геттеры и сеттеры
      */
 
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
     public Integer getId() {
         return id;
     }
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public String getEmploymentNumber() {
+        return employmentNumber;
+    }
+
+    public void setEmploymentNumber(String employmentNumber) {
+        this.employmentNumber = employmentNumber;
     }
 
     public String getProject() {
