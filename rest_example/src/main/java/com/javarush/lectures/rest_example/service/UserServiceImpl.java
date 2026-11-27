@@ -4,7 +4,7 @@ import com.javarush.lectures.rest_example.model.User;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -24,7 +24,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class UserServiceImpl implements UserService {
 
     // Хранилище клиентов
-    private static final Map<Integer, User> USER_REPOSITORY_MAP = new HashMap<>();
+    private static final Map<Integer, User> USER_REPOSITORY_MAP = new ConcurrentHashMap<>();
 
     // Переменная для генерации ID клиента
     private static final AtomicInteger USER_ID_HOLDER = new AtomicInteger();
@@ -48,12 +48,10 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean update(User user, int id) {
-        if (USER_REPOSITORY_MAP.containsKey(id)) {
-            user.setId(id);
-            USER_REPOSITORY_MAP.put(id, user);
-        }
-
-        return false;
+        return USER_REPOSITORY_MAP.computeIfPresent(id, (existingId, existingUser) -> {
+            user.setId(existingId);
+            return user;
+        }) != null;
     }
 
     @Override
